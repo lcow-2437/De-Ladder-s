@@ -1,0 +1,215 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #0b70a7;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+img {
+    width: 60px;
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header button {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #4CAF50;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #ddd;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Change from row to column */
+    align-items: center; /* Center align items */
+    width: 100%;
+    padding: 1em;
+}
+
+section {
+    width: 80%;
+    margin: 1em 0;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 1em;
+    width: calc(33% - 2em);
+    box-sizing: border-box;
+}
+
+/* Existing styles */
+
+/* Add hover and zoom effect to product images */
+.product img {
+    height: 150px;
+    width: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    padding: 4px;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.1); /* Zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Optional: If you want to apply a smooth transition effect when the image is zoomed in */
+.product img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.cart-item {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#shopping-cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    border-left: 1px solid #ddd;
+    padding: 1em;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+#shopping-cart.visible {
+    transform: translateX(0);
+}
+
+#close-cart-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#close-cart-button:hover {
+    background-color: #d32f2f;
+}
+
+footer {
+    background-color: #0b70a7;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+    .product, .cart-item {
+        width: calc(50% - 2em);
+    }
+
+    header button {
+        right: 0.5em;
+        padding: 0.4em 0.8em;
+        position: fixed; /* Make the button fixed */
+        top: 1em; /* Adjust the top position */
+    }
+
+    #shopping-cart {
+        width: 200px; /* Make the cart smaller */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .product, .cart-item {
+        width: 100%;
+    }
+
+    header {
+        padding: 0.5em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header button {
+        right: 0.5em;
+        padding: 0.3em 0.6em;
+        position: fixed; /* Make the button fixed */
+        top: 1em; /* Adjust the top position */
+    }
+
+    main {
+        padding: 0.5em;
+    }
+
+    section {
+        width: 100%;
+        margin: 0.5em 0;
+    }
+
+    #shopping-cart {
+        width: 100%;
+        height: auto;
+        max-height: 50%;
+        bottom: 0;
+        top: auto;
+        border-left: none;
+        border-top: 1px solid #ddd;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    #shopping-cart.visible {
+        transform: translateY(0);
+    }
+
+    #close-cart-button {
+        top: 5px;
+        right: 5px;
+        padding: 0.3em;
+    }
+}

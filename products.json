@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Step Ladder",
+        "description": "Versatile Multipurpose Step Ladder",
+        "price": 10.00,
+        "image": "images/product1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Extension Ladder",
+        "description": "Can be extended to reach high places",
+        "price": 20.00,
+        "image": "images/product2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Platform Ladder",
+        "description": "Designed for comfort and stability",
+        "price": 30.00,
+        "image": "images/product3.jpg"
+    }
+]

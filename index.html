@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="img_logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="De Ladder's Logo"/>
+        </a>
+    </div>
+    <header>
+        <h1>De Ladder's</h1>
+        <button id="cart-button">Cart (<span id="cart-count">0</span>)</button>
+    </header>
+    <main>
+        <section id="product-line">
+            <h2>Product Line</h2>
+            <div id="products"></div>
+        </section>
+    </main>
+    <aside id="shopping-cart" class="hidden">
+        <button id="close-cart-button">X</button>
+        <h2>Shopping Cart</h2>
+        <div id="cart"></div>
+        <div id="total"></div>
+    </aside>
+    <footer>
+        <p>&copy; 2024 De Ladder's</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
